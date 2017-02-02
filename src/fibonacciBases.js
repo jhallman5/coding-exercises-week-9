@@ -1,24 +1,22 @@
-// converting a regular number to fibboncacci
-function convertFib() {
+function convertToFib() {
   let number = document.getElementById('number').value
   let result = []
   let fibSeq = []
 
 //calculate fibSeq value
-function fibValue(resultArr){
-  let value = 0
-  for(let i = 0; i < fibSeq.length; i++) {
-    value += ( resultArr[i] * fibSeq[i] )
+  function fibValue(resultArr){
+    let value = 0
+    for(let i = 0; i < fibSeq.length; i++) {
+      value += ( resultArr[i] * fibSeq[i] )
+    } return value
   }
-  return value
-}
 
 //increment fib array
   function incrementFibLength() {
-       fibSeq.length > 1
-      ?  fibSeq.push(fibSeq[fibSeq.length - 1] + fibSeq[fibSeq.length - 2])
-      :  fibSeq.push(1)
-    }
+    fibSeq.length > 1
+      ? fibSeq.push(fibSeq[fibSeq.length - 1] + fibSeq[fibSeq.length - 2])
+      : fibSeq.push(1)
+  }
 
 //determine fib length
   function fibLength(number) {
@@ -46,10 +44,5 @@ function fibValue(resultArr){
   result = []
   fibSeq = fibSeq.reverse();
   final()
-  console.log('number ' + number)
-  console.log('result: ' + result)
-  console.log('fib: ' + fibSeq);
-
   alert(result)
-
 }
