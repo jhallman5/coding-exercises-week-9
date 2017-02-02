@@ -1,52 +1,55 @@
+// converting a regular number to fibboncacci
 function convertFib() {
-  let number = document.getElementById('number')
+  let number = document.getElementById('number').value
   let result = []
   let fibSeq = []
 
-// make the fibbonacci sequesne
-  function incrementFibLength() {
-    if(fibSeq = [])  { fibSeq =[1] return;}
-    if(fibSeq = [1]) { fibSeq = [1,1] return;}
-    fibSeq.push(fibSeq[fibSeq.length] + fibSeq[fibSeq.length - 1])
-  }
-
 //calculate fibSeq value
-function fibValue(){
+function fibValue(resultArr){
   let value = 0
-  for(let i = 0; i < fibSeq.legnth; i ++) {
-    value += ( result[i] * fibSeq[i] )
+  for(let i = 0; i < fibSeq.length; i++) {
+    value += ( resultArr[i] * fibSeq[i] )
   }
   return value
 }
 
-//switch fib values
-function flipTheBits(value){
-  if(value === 1){ return 0}
-  if(value === 0){return 1}
-}
+//increment fib array
+  function incrementFibLength() {
+       fibSeq.length > 1
+      ?  fibSeq.push(fibSeq[fibSeq.length - 1] + fibSeq[fibSeq.length - 2])
+      :  fibSeq.push(1)
+    }
 
-// main
-function flippingValues() {
-  while(fibValue < number) {
-    let count = 0
-    if((count + 1) > fibSeq.length) {incrementFibLength()}
-    fibSeq[count].flipTheBits()
-    count++
-    for(let i = 0; i < count; i++) {
-      fibSeq[i] = 0
+//determine fib length
+  function fibLength(number) {
+    while(fibValue(result) < number) {
+      incrementFibLength()
+      result.push(1)
     }
   }
-}
 
+//Finalizing results
+  function final() {
+    let remainder = number
+    for(let i = 0; i < fibSeq.length; i++) {
+      if( (fibSeq[i] <= remainder) && (remainder !== 0 )) {
+        result.push(1)
+        remainder -= fibSeq[i]
+      }else {
+        result.push(0)}
+    }
+  }
 
-  // fib 1 => 1
+  // determining necessary fib length
+  fibLength(number)
+  //reseting results and reversing fib array direction
+  result = []
+  fibSeq = fibSeq.reverse();
+  final()
+  console.log('number ' + number)
+  console.log('result: ' + result)
+  console.log('fib: ' + fibSeq);
 
-  //fib 2 => 11
-
-  // 3 => 101
-
-  //fib 4 => 211
-
-
+  alert(result)
 
 }

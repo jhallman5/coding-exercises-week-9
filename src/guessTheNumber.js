@@ -1,6 +1,6 @@
 const mysteryNumber = Math.floor(Math.random() * 100) + 1
 
-function guessTheNumber () {
+export default function guessTheNumber() {
   // console.log(mysteryNumber)
   let input = document.getElementById('answer').value
   if((typeof input != Number) && (input.toLowerCase() == 'exit')) {
@@ -16,6 +16,4 @@ function guessTheNumber () {
 }
 
 // //for testing
-// module.exports = {
-//   guessTheNumber : guessTheNumber
-// }
+// export default function guessTheNumber

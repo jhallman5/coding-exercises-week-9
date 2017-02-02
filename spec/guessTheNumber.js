@@ -1,6 +1,7 @@
 import guessTheNumber from "../src/guessTheNumber"
 import chai from "chai"
 
+
 describe("Guess the Number", () => {
   it("a gives the right alert when the number is correct" , () => {
 
@@ -9,4 +10,4 @@ describe("Guess the Number", () => {
 })
 
 
-// spec files currently not working 
+// spec files currently not working
