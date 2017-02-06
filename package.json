@@ -1,0 +1,32 @@
+{
+  "name": "coding-exercises-week-9",
+  "version": "1.0.0",
+  "description": "Week 9 ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-register ./spec/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhallman5/coding-exercises-week-9.git"
+  },
+  "author": "jhallman5",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jhallman5/coding-exercises-week-9/issues"
+  },
+  "homepage": "https://github.com/jhallman5/coding-exercises-week-9#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-env": "^1.1.4",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-register": "^6.18.0",
+    "chai": "~3.5.0",
+    "chai-change": "^2.1.2",
+    "jsdom": "9.9.1",
+    "jsdom-global": "2.1.1",
+    "mocha": "2.0.1",
+    "sinon": "^1.17.7"
+  }
+}
